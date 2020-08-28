@@ -29,11 +29,11 @@ public class CodeGenerator {
     // 数据库用户名
     private static final String USERNAME = "root";
     // 数据库密码
-    private static final String PASSWORD = "123456";
+    private static final String PASSWORD = "root";
     // @author 值
-    private static final String AUTHOR = "MrBird";
+    private static final String AUTHOR = "wuhao";
     // 包的基础路径
-    private static final String BASE_PACKAGE_URL = "cc.mrbird.febs";
+    private static final String BASE_PACKAGE_URL = "com.discovery.test";
     // xml文件路径
     private static final String XML_PACKAGE_URL = "/src/main/resources/mapper/";
     // xml 文件模板
@@ -55,7 +55,7 @@ public class CodeGenerator {
         // 全局配置
         GlobalConfig globalConfig = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
-        globalConfig.setOutputDir(projectPath + "/src/main/java");
+        globalConfig.setOutputDir(projectPath + "/src/java");
         globalConfig.setAuthor(AUTHOR);
         globalConfig.setOpen(false);
         globalConfig.setFileOverride(false);

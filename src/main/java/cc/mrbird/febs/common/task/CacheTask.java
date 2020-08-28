@@ -21,6 +21,9 @@ public class CacheTask {
     @Autowired
     private RedisService redisService;
 
+    /**
+     * 间隔一个小时执行一次
+     */
     @Scheduled(fixedRate = 3600000)
     public void run() {
         try {
