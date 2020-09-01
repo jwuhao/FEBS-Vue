@@ -60,7 +60,7 @@ mybatis-plus:
   global-config:
     # 关闭 mybatis-plus的 banner
     banner: false
-
+# springboot端点管理 关闭端点web方式
 management:
   endpoints:
     web:

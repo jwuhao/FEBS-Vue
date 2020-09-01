@@ -8,6 +8,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 
+/**
+ * 处理异步方法调用线程池配置
+ */
 @Configuration
 public class AsyncExecutorPoolConfig extends AsyncConfigurerSupport {
     @Bean

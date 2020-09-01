@@ -3,7 +3,6 @@ package cc.mrbird.febs.common.domain.router;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
-import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,6 +12,7 @@ import java.util.List;
  * 构建 Vue路由
  */
 @Data
+// 数据为空的数据不参与序列化
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class VueRouter<T> implements Serializable {
 

@@ -27,12 +27,13 @@ public class ShiroConfig {
         // 在 Shiro过滤器链上加入 JWTFilter
         LinkedHashMap<String, Filter> filters = new LinkedHashMap<>();
         filters.put("jwt", new JWTFilter());
+        // 设置过滤器
         shiroFilterFactoryBean.setFilters(filters);
 
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         // 所有请求都要经过 jwt过滤器
         filterChainDefinitionMap.put("/**", "jwt");
-
+        // shiro过滤的对象
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
     }

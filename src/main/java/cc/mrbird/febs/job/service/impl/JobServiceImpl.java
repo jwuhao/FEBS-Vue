@@ -37,6 +37,7 @@ public class JobServiceImpl extends ServiceImpl<JobMapper, Job> implements JobSe
 
     /**
      * 项目启动时，初始化定时器
+     * PostConstruct在构造函数之后执行，init（）方法之前执行
      */
     @PostConstruct
     public void init() {

@@ -11,8 +11,14 @@ public class JWTToken implements AuthenticationToken {
 
     private static final long serialVersionUID = 1282057025599826155L;
 
+    /**
+     * token
+     */
     private String token;
 
+    /**
+     * 存在时间
+     */
     private String exipreAt;
 
     public JWTToken(String token) {

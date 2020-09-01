@@ -16,8 +16,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.Collections;
 
 /**
-* @author wx
-*/
+ * swagger2配置
+ */
 @Configuration
 @EnableSwagger2
 public class FebsConfig {

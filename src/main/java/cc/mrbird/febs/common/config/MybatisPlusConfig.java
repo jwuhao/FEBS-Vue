@@ -5,6 +5,9 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * mybaits分页插件配置
+ */
 @Configuration
 @MapperScan(value = {"cc.mrbird.febs.*.dao"})
 public class MybatisPlusConfig {
