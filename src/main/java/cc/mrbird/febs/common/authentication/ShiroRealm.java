@@ -41,6 +41,13 @@ public class ShiroRealm extends AuthorizingRealm {
     /**`
      * 授权模块，获取用户角色和权限
      *
+     * 1. 调用SecurityUtils.getSubject().isPermitted(String str)方法时会调用。
+     *
+     * 2. 在@Controller 上@RequiresRoles("admin")在方法上加注解的时候调用
+     *
+     * 3. [@shiro.hasPermission name = "admin"][/@shiro.hasPermission]
+     * 或者<shiro:hasPermission name="admin"></shiro:hasPermission>
+     * 在页面上加shiro标签的时候，即进这个页面的时候扫描到有这个标签的时候调用
      * @param token token
      * @return AuthorizationInfo 权限信息
      */
@@ -62,7 +69,7 @@ public class ShiroRealm extends AuthorizingRealm {
 
     /**
      * 用户认证
-     *
+     * 该方法是进行用户验证的。调用currUser.login(token)方法时会调用doGetAuthenticationInfo方法
      * @param authenticationToken 身份认证 token
      * @return AuthenticationInfo 身份认证信息
      * @throws AuthenticationException 认证相关异常

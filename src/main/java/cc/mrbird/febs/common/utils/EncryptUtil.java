@@ -5,6 +5,9 @@ import javax.crypto.Cipher;
 import java.security.Key;
 import java.security.Security;
 
+/**
+ * 加密工具类
+ */
 public class EncryptUtil {
 
     //设置默认密匙

@@ -11,6 +11,10 @@ public class HttpContextUtil {
 	private HttpContextUtil(){
 
 	}
+
+	/**
+	 * 获取请求上下文的请求对象
+	 */
 	public static HttpServletRequest getHttpServletRequest() {
 		return ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();
 	}

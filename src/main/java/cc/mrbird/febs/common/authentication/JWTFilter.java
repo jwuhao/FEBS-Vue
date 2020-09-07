@@ -25,6 +25,9 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
 
     private static final String TOKEN = "Authentication";
 
+    /**
+     * 类URLs字符串匹配
+     */
     private AntPathMatcher pathMatcher = new AntPathMatcher();
 
     @Override
@@ -45,6 +48,11 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
         return false;
     }
 
+    /**
+     * token的值是否存在
+     * @param request 请求对象
+     * @param response 相应对象
+     */
     @Override
     protected boolean isLoginAttempt(ServletRequest request, ServletResponse response) {
         HttpServletRequest req = (HttpServletRequest) request;
@@ -52,6 +60,11 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
         return token != null;
     }
 
+    /**
+     *
+     * @param request 请求对象
+     * @param response 相应对象
+     */
     @Override
     protected boolean executeLogin(ServletRequest request, ServletResponse response) {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;

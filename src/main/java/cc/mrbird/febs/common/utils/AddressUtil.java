@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Objects;
 
+/**
+ * 根据ip获取指定本地地址
+ */
 @Slf4j
 public class AddressUtil {
 
